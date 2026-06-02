@@ -54,14 +54,9 @@ For all other sites — WSJ, Bloomberg, The Information, Business Insider, etc. 
 3. Enable **Developer mode** (toggle, top right)
 4. Click **Load unpacked** → select the `extension/` folder
 
-### 2. Set Superhuman (or your preferred client) as default mail handler
+### 2. Set your preferred client as default mail handler
 
-When you click "Open Draft", the extension opens a `mailto:` link. For this to land in Superhuman:
-
-- **macOS:** System Settings → General → Default Apps → set your default email app to Superhuman
-- **Gmail:** Install the [Gmail handler](https://support.google.com/chrome/answer/1382847) so Chrome routes `mailto:` to Gmail
-
-Any mail client that registers as a `mailto:` handler will work.
+When you click "Open Draft", the extension opens a `mailto:` link. Any mail client that registers as a `mailto:` handler will work.
 
 ---
 
@@ -70,8 +65,7 @@ Any mail client that registers as a `mailto:` handler will work.
 1. Navigate to a news article
 2. Click the **Article Emailer** icon in the Chrome toolbar
 3. The popup shows the detected subject line and gift link field
-   - If a gift link was auto-detected, the field is pre-filled (marked "auto-detected")
-   - If not, paste your gift link into the field
+   - Paste your gift link into the field
 4. Click **Open Draft in Email**
 5. Your mail client opens with the subject pre-filled
 6. Click in the body area and paste with **⌘V** (Mac) or **Ctrl+V** (Windows/Linux)
@@ -109,15 +103,6 @@ extension/
     ├── icon48.png
     └── icon128.png
 ```
-
----
-
-## Roadmap
-
-- [ ] More gift link auto-detection sites (Bloomberg, WSJ, The Information)
-- [ ] AI-powered chart/photo classification (opt-in, uses Anthropic API)
-- [ ] Options page: configure subject prefix, truncation length, default mail client
-- [ ] Chrome Web Store listing
 
 ---
 
