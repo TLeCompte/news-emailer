@@ -104,7 +104,8 @@ async function init() {
 
   const { article } = result;
 
-  $('subject').value = `${article.publication}: ${article.title}`;
+  const pubLabel = getPublicationAbbr(article.publication, article.hostname);
+  $('subject').value = `${pubLabel}: ${article.title}`;
 
   const giftInput = $('gift-link');
 

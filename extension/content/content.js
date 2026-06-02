@@ -81,6 +81,7 @@
       textContent: article.textContent || '',
       content: article.content || '',
       publication,
+      hostname: window.location.hostname,
       url: window.location.href,
     };
   }
