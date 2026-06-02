@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article Emailer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="loading">
+      <div class="spinner"></div>
+      <span>Reading article…</span>
+    </div>
+
+    <div id="error" class="hidden">
+      <p id="error-msg">Could not parse this page.</p>
+    </div>
+
+    <div id="form" class="hidden">
+      <div class="field">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" spellcheck="false" />
+      </div>
+
+      <div class="field">
+        <label for="gift-link">
+          Gift link
+          <span id="gift-status" class="badge"></span>
+        </label>
+        <input type="url" id="gift-link" placeholder="Paste gift link…" spellcheck="false" />
+      </div>
+
+      <button id="open-draft">Open Draft in Email</button>
+
+      <div id="char-warning" class="hidden warning">
+        Article truncated to fit email length limit.
+      </div>
+
+      <div id="clipboard-notice" class="hidden notice">
+        Rich body copied to clipboard. In Superhuman, paste with <strong>⌘V</strong>.
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
