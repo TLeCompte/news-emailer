@@ -12,7 +12,7 @@ function setError(msg) {
   show('error');
 }
 
-// Superhuman strips <style> blocks on paste, so stamp spacing as inline styles instead.
+// Email clients strip <style> blocks on paste, so stamp spacing as inline styles instead.
 function inlineParaSpacing(html) {
   // Add margin-bottom to <p> tags that don't already have a style attribute.
   // Also style tables inline so they survive the paste.
@@ -136,7 +136,7 @@ async function init() {
 
     if (truncated) show('char-warning');
 
-    // Copy HTML to clipboard so user can paste rich content into Superhuman
+    // Copy HTML to clipboard so user can paste rich content into their email client
     try {
       await navigator.clipboard.write([
         new ClipboardItem({
@@ -148,7 +148,7 @@ async function init() {
       // Clipboard write failed — fall through, mailto body is the fallback
     }
 
-    // Open mailto: with only subject — no body parameter so Superhuman opens
+    // Open mailto: with only subject — no body parameter so the email client opens
     // with an empty compose, and the clipboard paste (⌘V) inserts the HTML body.
     const mailtoUrl = 'mailto:?subject=' + encodeURIComponent(subject);
 

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Article Emailer",
   "version": "0.1.0",
-  "description": "One-click article sharing: strip ads, grab gift link, open draft in Superhuman.",
+  "description": "One-click article sharing: strip ads, paste gift link, open a clean HTML draft in your email client.",
   "permissions": ["activeTab", "scripting", "clipboardWrite"],
   "action": {
     "default_popup": "popup/popup.html",
