@@ -1,31 +1,4 @@
 (() => {
-  // --- Gift link detection (site-specific) ---
-
-  function detectGiftLink() {
-    const host = window.location.hostname;
-
-    if (host.includes('nytimes.com')) {
-      const giftAnchor = document.querySelector('a[href*="/gift/"]');
-      if (giftAnchor) return giftAnchor.href;
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical && canonical.href.includes('/gift/')) return canonical.href;
-      return null;
-    }
-
-    if (host.includes('washingtonpost.com')) {
-      const giftEl = document.querySelector('[data-gift-link], [href*="gift="], a[href*="&gift="], a[href*="?gift="]');
-      if (giftEl) return giftEl.href || giftEl.dataset.giftLink;
-      return null;
-    }
-
-    if (host.includes('theatlantic.com')) {
-      const giftEl = document.querySelector('a[href*="gift"], [data-gift]');
-      if (giftEl) return giftEl.href || giftEl.dataset.gift;
-      return null;
-    }
-
-    return null;
-  }
 
   // --- Chart vs photo heuristics (run against the live DOM where naturalWidth is available) ---
 
@@ -114,8 +87,7 @@
 
   // --- Main ---
 
-  const giftLink = detectGiftLink();
   const article = extractArticle();
 
-  return { giftLink, article };
+  return { giftLink: null, article };
 })();

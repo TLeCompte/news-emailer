@@ -102,21 +102,11 @@ async function init() {
     return;
   }
 
-  const { article, giftLink } = result;
+  const { article } = result;
 
   $('subject').value = `${article.publication}: ${article.title}`;
 
   const giftInput = $('gift-link');
-  const badge = $('gift-status');
-
-  if (giftLink) {
-    giftInput.value = giftLink;
-    badge.textContent = 'auto-detected';
-    badge.className = 'badge detected';
-  } else {
-    badge.textContent = 'paste required';
-    badge.className = 'badge missing';
-  }
 
   hide('loading');
   show('form');

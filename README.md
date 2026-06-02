@@ -13,9 +13,9 @@ A Chrome extension that turns any news article into a clean, formatted email dra
 When you're reading a news article and want to share it, click the extension icon. It will:
 
 1. **Extract the article** — strips ads, navigation, comments, and other noise using [Mozilla Readability](https://github.com/mozilla/readability) (the same engine that powers Firefox Reader View)
-2. **Detect gift links** — automatically finds subscriber gift links on supported sites (NYT, Washington Post, The Atlantic) so recipients can read paywalled content. For other sites, you paste the gift link in yourself.
-3. **Copy a rich HTML body to your clipboard** — formatted with the headline as a hyperlink, italic byline, clean paragraphs, and any data tables or charts from the article
-4. **Open a new draft** in your default mail client with the subject pre-filled as `Publication: Headline`
+2. **Copy a rich HTML body to your clipboard** — formatted with the headline as a hyperlink, italic byline, clean paragraphs, and any data tables or charts from the article
+3. **Open a new draft** in your default mail client with the subject pre-filled as `Publication: Headline`
+4. **Gift link field** — paste your gift link into the popup before opening the draft; it becomes the hyperlink target on the headline
 
 Just paste (⌘V / Ctrl+V) into the email body and send.
 
@@ -34,14 +34,11 @@ Just paste (⌘V / Ctrl+V) into the email body and send.
 
 ---
 
-## Supported sites
+## Gift links
 
-Gift link auto-detection works on:
-- **New York Times** (nytimes.com)
-- **Washington Post** (washingtonpost.com)
-- **The Atlantic** (theatlantic.com)
+Most publishers (NYT, WSJ, Bloomberg, The Atlantic, etc.) only generate a gift link after the user explicitly clicks "Share" or "Gift this article" — there's nothing to detect in the page until that happens. So the extension always shows a **paste field** in the popup. Copy the gift link from the site's share menu, paste it in, and it becomes the clickable headline link in the email.
 
-For all other sites — WSJ, Bloomberg, The Information, Business Insider, etc. — the extension extracts and formats the article, and shows a field in the popup where you can paste a gift link manually before opening the draft.
+The extension works on any article page regardless of publication.
 
 ---
 
