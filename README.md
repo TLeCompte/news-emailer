@@ -23,7 +23,7 @@ Just paste (⌘V / Ctrl+V) into the email body and send.
 
 ## Email format
 
-**Subject:** `The Wall Street Journal: Bill Pulte Named as Acting Director of National Intelligence`
+**Subject:** `The Wall Street Journal: SpaceX’s IPO Is the Final Frontier for Index Funds`
 
 **Body (pasted as rich HTML):**
 - Headline linked to the gift URL
